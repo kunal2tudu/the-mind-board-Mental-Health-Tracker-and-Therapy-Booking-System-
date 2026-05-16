@@ -1,59 +1,118 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+  <h1>🧠 The Mind Board</h1>
+  <p><em>A Revolutionary, Subscription-Gated Mental Health Platform</em></p>
+</div>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+---
 
-## About Laravel
+## 📖 Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**The Mind Board** is an advanced, production-ready web application designed to disrupt the clinical, intimidating aesthetic of traditional therapy software. Built with an intentionally soothing, chaotic "doodle" design system using Tailwind CSS, it normalizes human emotion while delivering highly robust, complex backend architecture.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This project was built from the ground up using **Laravel 11**, **MongoDB**, and the **Google Gemini Artificial Intelligence API**.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## ✨ Core Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 📅 Smart Subscription-Gated Booking Engine
+*   **Concurrency Locking:** Real-time database checks prevent "race conditions" where two users might book the exact same slot.
+*   **Algorithmic Availability:** Dynamically subtracts booked slots from standard operating hours.
+*   **Credit Refunds:** Full cancellation lifecycle management. Cancelling a session automatically refunds 1 credit to the user's subscription ledger.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🤖 AI Integration ("Dr. MindBoard")
+*   Integrated with Google's **Gemini 2.5 Flash API**.
+*   Uses asynchronous JavaScript (`fetch()`) to communicate with the AI in real-time without locking the PHP server.
+*   Strict Prompt Engineering forces the AI to act as a supportive, empathetic, non-medical sounding board.
 
-## Laravel Sponsors
+### ✉️ Two-Way Secure Messaging & RBAC
+*   **Role-Based Access Control:** Separate portals for Patients and Therapists. 
+*   **Therapist Portal:** A dedicated, hidden dashboard where professionals can view their daily schedule and reply securely to patient text logs.
+*   **SMTP Notifications:** Automatically dispatches email alerts to the therapist's inbox when a new patient message arrives.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 📈 Dynamic SVG Mood Graphing
+*   Users log daily emotional states (Good, Okay, Bad).
+*   The application mathematically generates a raw `<path d="M... C...">` string using **Bézier curves** to draw a continuous, wobbly mood graph dynamically in the browser—no third-party charting libraries required!
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🛠️ Technology Stack
 
-## Contributing
+*   **Backend:** Laravel 11.x (PHP 8.2+)
+*   **Database:** MongoDB v6.0+ (via `mongodb/laravel-mongodb`)
+*   **Frontend Rendering:** Laravel Blade templating engine
+*   **Styling:** Tailwind CSS (Utility-first framework)
+*   **AI Engine:** Google Generative Language API
+*   **Authentication:** Laravel Breeze (Bcrypt password hashing)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🚀 Installation & Local Development
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Prerequisites
+You must have **PHP 8.2+**, **Composer**, **Node.js**, and a running **MongoDB** server installed on your machine. The PHP MongoDB extension (`mongodb.so` or `php_mongodb.dll`) must be enabled.
 
-## Security Vulnerabilities
+### Steps
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/kunal2tudu/the-mind-board-Mental-Health-Tracker-and-Therapy-Booking-System-.git
+   cd "the-mind-board-Mental-Health-Tracker-and-Therapy-Booking-System-"
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2. **Install PHP and Node dependencies:**
+   ```bash
+   composer install
+   npm install
+   ```
 
-## License
+3. **Configure the Environment:**
+   Copy the example `.env` file:
+   ```bash
+   cp .env.example .env
+   ```
+   Open the `.env` file and configure your API keys and MongoDB connection:
+   ```env
+   DB_CONNECTION=mongodb
+   DB_DSN="mongodb://localhost:27017/"
+   DB_DATABASE=the_mind_board
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+   MAIL_MAILER=smtp
+   MAIL_HOST=smtp.gmail.com
+   MAIL_PORT=587
+   MAIL_USERNAME=your_gmail
+   MAIL_PASSWORD=your_app_password
+   
+   GEMINI_API_KEY=your_google_ai_key
+   ```
+
+4. **Generate Application Key:**
+   ```bash
+   php artisan key:generate
+   ```
+
+5. **Run the Development Servers:**
+   Open two terminal windows.
+   In Terminal 1 (Vite Asset Bundler):
+   ```bash
+   npm run dev
+   ```
+   In Terminal 2 (Laravel PHP Server):
+   ```bash
+   php artisan serve
+   ```
+
+6. **Access the application:**
+   Navigate to `http://localhost:8000` in your web browser.
+
+---
+
+## 🛡️ Security Measures
+*   **NoSQL Injection Prevention:** All MongoDB queries use Eloquent parameterized queries.
+*   **Cross-Site Scripting (XSS):** Blade's `{{ }}` syntax escapes all database output.
+*   **CSRF Protection:** All mutating routes (POST/PUT/DELETE) strictly enforce `@csrf` tokens linked to encrypted session cookies.
+
+---
+
+## 🎓 Academic / Viva Notes
+This project is accompanied by a massive 30-page Software Requirements Specification (SRS) detailing the explicit flow of data between Models, Views, and Controllers, including architectural justifications. Check the `/resources/` directory for the `.docx` files!
