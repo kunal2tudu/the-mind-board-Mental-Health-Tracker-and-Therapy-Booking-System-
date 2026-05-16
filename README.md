@@ -114,5 +114,3 @@ You must have **PHP 8.2+**, **Composer**, **Node.js**, and a running **MongoDB**
 
 ---
 
-## 🎓 Academic / Viva Notes
-This project is accompanied by a massive 30-page Software Requirements Specification (SRS) detailing the explicit flow of data between Models, Views, and Controllers, including architectural justifications.
